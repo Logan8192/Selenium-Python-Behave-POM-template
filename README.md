@@ -1,4 +1,4 @@
-# Selenium-Python-Behave-POM-template
+# Selenium-Python-Behave-PyHamCrest
 Page Object Model pattern template using Python, Selenium and the behavior-driven development tool Behave.
 
 ## Install Requirements:

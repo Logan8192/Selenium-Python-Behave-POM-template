@@ -7,14 +7,14 @@ from hamcrest import *
 def home_page_verification(context):
     home_page = HomePage(context.driver)
     context.current_page = home_page
-    assert home_page.is_page_loaded() is True
+    assert_that(home_page.is_page_loaded(), is_(equal_to(True)), reason="Home page is not loaded")
 
 
 @when('I type "Python" in the search bar and press enter')
 def search_website(context):
     home_page = context.current_page
     home_page.fill_search_input("Python")
-    assert_that(home_page.return_search_input_text(), is_(equal_to('Python')),
+    assert_that(home_page.return_search_input_text(), is_(equal_to("Python")),
                 reason="Text contained in the search input was not the expected")
     search_results_page = home_page.click_search_button()
     context.current_page = search_results_page
