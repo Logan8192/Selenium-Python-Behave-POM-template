@@ -1,5 +1,5 @@
-# Selenium-Python-Behave-PyHamCrest
-Page Object Model pattern template using Python, Selenium and the behavior-driven development tool Behave.
+# Python-Selenium-Behave-PyHamCrest 
+Web automation testing framework using the page object model pattern with Python, Selenium and the behavior-driven development tool Behave.
 
 ## Install Requirements:
 Once the virtual environment for the repository is created and activated, run this command to download the project 
@@ -8,8 +8,21 @@ requirements:
 pip3 install -r requirements.txt 
 ```
 
-## Running Tests:
+## Run Tests:
 In order to run all tests, it is only necessary to run the command:
 ``` 
-behave
+behave --define driver="DRIVER NAME"
+```
+
+Make sure to add a correct driver name parameter in order to set the browser where the test will be executed 
+with the following values:
+
+ - Linux:
+    - **Chrome**: *CHROME_LINUX*
+    - **Firefox**: *FIREFOX_LINUX*
+    - **Opera**: *OPERA_LINUX*
+ 
+**Example:**
+``` 
+behave --define driver="CHROME_LINUX"
 ```
